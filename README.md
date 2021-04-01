@@ -32,11 +32,7 @@ Commit and push the modified file.
 
 1. A computer with Docker installed (either the basement CSE labs, or your own laptop).
 
-2. The lab for the github classroom assignment for this lab:
-
-* Section A (Monday): https://classroom.github.com/a/IjkqbBTv
-
-* Section B (Wednesday): https://classroom.github.com/a/-VPj3rda
+2. The lab for the github classroom assignment for this lab: https://classroom.github.com/a/gNSleHrN
 
 **Note** Starting early on the lab is a form of cheating.  If you are
   in Section B, don't click on the Section A link.  If you do by
