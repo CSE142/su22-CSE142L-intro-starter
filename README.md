@@ -32,7 +32,11 @@ Commit and push the modified file.
 
 1. A computer with Docker installed (either the basement CSE labs, or your own laptop).
 
-2. The lab for the github classroom assignment for this lab: https://classroom.github.com/a/gNSleHrN
+2. The lab for the github classroom assignment for this lab:
+
+* Section A (Monday): https://classroom.github.com/a/IjkqbBTv
+
+* Section B (Wednesday): https://classroom.github.com/a/-VPj3rda
 
 **Note** Starting early on the lab is a form of cheating.  If you are
   in Section B, don't click on the Section A link.  If you do by
@@ -71,76 +75,72 @@ and the autograder/course staff.
 There are several different methods
 you can use to get access to a machine running docker.
 
-#### Use ieng6.ucsd.edu
+#### Use dsmlp-login.ucsd.edu
 
 This is the official way to use the class infrastructure.  If you have trouble getting any of the other options to work, use this.
 
-Login to 'ieng6.ucsd.edu' (our primary student Linux SSH server) using you normal student login.
+Login to 'dsmlp-login.ucsd.edu' (our primary student Linux SSH server) using you normal student login.
 
-Run the command `launch-141` to connect to a remote Docker container running the development environment image.
+Run the command `launch-142` to connect to a remote Docker container running the development environment image.
 
 Here's a transcript of the login process for user `cs141lwi20zz`:
 
 ```
-$ ssh cs141lwi20zz@ieng6.ucsd.edu
-Password:
-Attempting to create directory /home/linux/ieng6/cs141lwi20/cs141lwi20zz/perl5
+$ ssh cs141lwi20zz@dsmlp-login.ucsd.edu
+To see all available software packages, type "prep -l" at the command prompt,
+or "prep -h" for more options.
 ============================ NOTICE =================================
 Authorized use of this system is limited to password-authenticated
 usernames which are issued to individuals and are for the sole use of
 the person to whom they are issued.
 
-Privacy notice: be aware that computer files, electronic mail and
-accounts are not private in an absolute sense.  For a statement of
-"ETS (formerly ACMS) Acceptable Use Policies" please see our webpage
-at http://acms.ucsd.edu/info/aup.html.
-
+Privacy notice: be aware that computer files, electronic mail and 
+accounts are not private in an absolute sense.  You are responsible
+for adhering to the ETS Acceptable Use Policies, which you can review at:
+https://blink.ucsd.edu/faculty/instruction/tech-guide/policies/ets-acceptable-use-policies.html
 =====================================================================
 
-Disk quotas for user cs141lwi20zz (uid 28804):
-     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
-     172.17.65.194:/vol/home/linux/ieng6
-                          52  204800  204800              25    4000    4000
+*** Data Science and Machine Learning Platform Resources ***
+    
+    How to Launch Containers From the Command Line: 
+    https://support.ucsd.edu/services?id=kb_article_view&sysparm_article=KB0032269
 
-------------------------------------------------------
+    How to Select and Configure Your Container:
+    https://support.ucsd.edu/services?id=kb_article_view&sysparm_article=KB0032273
 
-Account check:  http://acms.ucsd.edu-> Account Lookup
+    Building Your Own Custom Image:
+    https://github.com/ucsd-ets/datahub-example-notebook
 
-* Remotix download/installation: tritoned.ucsd.edu
-* How to access campus licensed software:
-        http://blink.ucsd.edu/faculty/instruction/tritoned/students.html#Download-Course-Software
+    Your instructor or TA will be your best resource for course-specific questions.
+    
+    If you still have questions or need additional assistance, please email dsmlp@ucsd.edu 
+    to create a support ticket.
 
-/*---------------------
-        Available remote ieng6-XXX hosts to connect:
 
-        * ieng6-240, ieng6-241, ieng6-242, ieng6-243, ieng6-244, ieng6-245
-	* ieng6-246, ieng6-247, ieng6-248, ieng6-249, ieng6-640, ieng6-700
-	* ieng6-701, ieng6-702
+-------------------------------------------------------
 
-*ECE* students, please check with your TA or instructor on which hosts
-you can run your projects.
+quota: No filesystem specified.
+Hello cs141lwi20zz, you are currently logged into dsmlp-login.ucsd.edu
 
---------------------------*/
+You are using 0% CPU on this system
 
-Tue Jan 07, 2020 10:12am - Prepping cs141lwi20
-[cs141lwi20zz@ieng6-201]:~:1$ launch-141
+[cs141lwi20zz@dsmlp-login]:~:1$ launch-142
 Attempting to create job ('pod') with 4 CPU cores, 16 GB RAM, and 0 GPU units.
-   (Adjust command line options, or edit "/home/linux/ieng6/cs141lwi20/public/bin/launch-141" to change this configuration.)
-   pod/cs141lwi20zz-10005 created
-   Tue Jan 7 10:12:31 PST 2020 starting up - pod status: Pending ; containers with incomplete status: [init-support]
-   Tue Jan 7 10:12:36 PST 2020 pod is running with IP: 10.47.0.7 on node: its-dsmlp-n05.ucsd.edu
-   ucsdnvsl/cse141pp:latest is now active.
+   (Adjust command line options, or edit "/software/common64/dsmlp/bin/launch-142.sh" to change this configuration.)
+pod/cs141lwi20zz-1435 created
+Sat Apr 3 16:40:17 PDT 2021 starting up - pod status: Pending ; Successfully assigned cs141lwi20zz/cs141lwi20zz-1435 to its-dsmlp-n25.ucsd.edu
+Sat Apr 3 16:40:23 PDT 2021 pod is running with IP: 10.40.224.4 on node: its-dsmlp-n25.ucsd.edu
+ucsdnvsl/cse141pp:latest is now active.
 
-Connected to cs141lwi20zz-10005; type 'exit' to terminate pod/processes.
-/course/CSE141pp-Config /home/linux/dsmlp/04/804/cs141lwi20zz
+Connected to cs141lwi20zz-1435; type 'exit' to terminate pod/processes.
+/course/CSE141pp-Config ~
 cat: /course/CSE141pp-Config/secrets/packet_auth_token: No such file or directory
 Welcome to the archlab development environment!
 STUDENT_MODE enabled
-THIS_DOCKER_IMAGE=ucsdnvsl/cse141pp:wi19.61
+THIS_DOCKER_IMAGE=ucsdnvsl/cse141pp:sp21.142
 IN_DEPLOYMENT=DEPLOYED
 CLOUD_MODE=CLOUD
-/home/linux/dsmlp/04/804/cs141lwi20zz
-cs141lwi20zz@cs141lwi20zz-10005:~$
+[cs141lwi20zz@dsmlp-login]:~:2$
 ```
 
 To make sure everything is working, you can run `runlab --help`.  You should get this:
@@ -178,7 +178,7 @@ If you go this route, you can skip instructions below regarding running `docker`
 
 You can then clone your repo in the directory that you land in and work on it.
 
-Your files inside the `launch-141` environment are stored in this system: https://datahub.ucsd.edu/hub/login.
+Your files inside the `launch-142` environment are stored in this system: https://datahub.ucsd.edu/hub/login.
 
 #### Run Docker Locally on Your Mac
 
@@ -292,7 +292,7 @@ Follow directions here: https://docs.docker.com/docker-for-windows/
 
 ### Start a Docker Container
 
-This only applies if you are running docker on your own machine (i.e., not on ieng6).  If you are running on ieng6, then you should skip this.
+This only applies if you are running docker on your own machine (i.e., not on `dsmlp-login`).  If you are running on `dsmlp-login`, then you should skip this.
 
 The docker image you'll be using is `ucsdnvsl/CSE141pp:latest`.
 
