@@ -32,7 +32,7 @@ Commit and push the modified file.
 
 1. A computer with Docker installed (either the basement CSE labs, or your own laptop).
 
-2. The lab for the github classroom assignment for this lab: https://classroom.github.com/a/gNSleHrN
+2. The lab for the github classroom assignment for this lab:  https://classroom.github.com/a/gNSleHrN
 
 **Note** Starting early on the lab is a form of cheating.  If you are
   in Section B, don't click on the Section A link.  If you do by
@@ -43,7 +43,7 @@ Commit and push the modified file.
 ### Fill Out The Self Evaluation
 
 Login to your __@ucsd.edu__ gmail account and fill out [this
-survey](https://docs.google.com/forms/d/e/1FAIpQLSdsa6DOC-hE53r-OIhaVTFgQhD7GSHnXBFFyMI1egNBNyAIhA/viewform).
+survey](https://docs.google.com/forms/d/e/1FAIpQLSfLCN85SHaJr5dGAElpZWOPK0sRrbyWqIBcOD4ZW4rxnjjgJA/viewform).
 You do not need to do this again if you already filled it out for CSE
 142.
 
@@ -195,10 +195,10 @@ It is possible to run Docker on Windows, but we've had many issues
 with, and we don't support it.  The lab staff is not able to assist
 with getting docker running under windows.
 
-One thing to keep in mind:  The docker image large (~9GB) and you'll need to devote at least 2GB of DRAM to it.
+One thing to keep in mind:  The docker image large (~18GB) and you'll need to devote at least 2GB of DRAM to it.
 
-Here is a short tutorial to help you install Docker on Windows 10. Here is a link to the same guide with visuals.
-http://www.piazza.com/class_profile/get_resource/k4rct0mauar3/k546qnrbrzn1zg
+[Here](https://hub.docker.com/editions/community/docker-ce-desktop-windows) is a
+short tutorial to help you install Docker on Windows 10.
 
 1.  Install Windows 10 Pro or Education
     - If you have Windows 10 Pro or Education, continue to step 2. If you do not have Windows 10 Pro or Education, follow the steps below.
