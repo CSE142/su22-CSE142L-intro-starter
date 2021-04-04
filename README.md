@@ -45,7 +45,7 @@ Commit and push the modified file.
 Login to your __@ucsd.edu__ gmail account and fill out [this
 survey](https://docs.google.com/forms/d/e/1FAIpQLSdsa6DOC-hE53r-OIhaVTFgQhD7GSHnXBFFyMI1egNBNyAIhA/viewform).
 You do not need to do this again if you already filled it out for CSE
-141.
+142.
 
 ### Get set up Github
 
@@ -79,10 +79,10 @@ Login to 'dsmlp-login.ucsd.edu' (our primary student Linux SSH server) using you
 
 Run the command `launch-142` to connect to a remote Docker container running the development environment image.
 
-Here's a transcript of the login process for user `cs141lwi20zz`:
+Here's a transcript of the login process for user `cs142lsp21zz`:
 
 ```
-$ ssh cs141lwi20zz@dsmlp-login.ucsd.edu
+$ ssh cs142lsp21zz@dsmlp-login.ucsd.edu
 To see all available software packages, type "prep -l" at the command prompt,
 or "prep -h" for more options.
 ============================ NOTICE =================================
@@ -116,19 +116,19 @@ https://blink.ucsd.edu/faculty/instruction/tech-guide/policies/ets-acceptable-us
 -------------------------------------------------------
 
 quota: No filesystem specified.
-Hello cs141lwi20zz, you are currently logged into dsmlp-login.ucsd.edu
+Hello cs142lsp21zz, you are currently logged into dsmlp-login.ucsd.edu
 
 You are using 0% CPU on this system
 
-[cs141lwi20zz@dsmlp-login]:~:1$ launch-142
+[cs142lsp21zz@dsmlp-login]:~:1$ launch-142
 Attempting to create job ('pod') with 4 CPU cores, 16 GB RAM, and 0 GPU units.
    (Adjust command line options, or edit "/software/common64/dsmlp/bin/launch-142.sh" to change this configuration.)
-pod/cs141lwi20zz-1435 created
-Sat Apr 3 16:40:17 PDT 2021 starting up - pod status: Pending ; Successfully assigned cs141lwi20zz/cs141lwi20zz-1435 to its-dsmlp-n25.ucsd.edu
+pod/cs142lsp21zz-1435 created
+Sat Apr 3 16:40:17 PDT 2021 starting up - pod status: Pending ; Successfully assigned cs142lsp21zz/cs142lsp21zz-1435 to its-dsmlp-n25.ucsd.edu
 Sat Apr 3 16:40:23 PDT 2021 pod is running with IP: 10.40.224.4 on node: its-dsmlp-n25.ucsd.edu
 ucsdnvsl/cse141pp:latest is now active.
 
-Connected to cs141lwi20zz-1435; type 'exit' to terminate pod/processes.
+Connected to cs142lsp21zz-1435; type 'exit' to terminate pod/processes.
 /course/CSE141pp-Config ~
 cat: /course/CSE141pp-Config/secrets/packet_auth_token: No such file or directory
 Welcome to the archlab development environment!
@@ -136,13 +136,13 @@ STUDENT_MODE enabled
 THIS_DOCKER_IMAGE=ucsdnvsl/cse141pp:sp21.142
 IN_DEPLOYMENT=DEPLOYED
 CLOUD_MODE=CLOUD
-[cs141lwi20zz@dsmlp-login]:~:2$
+[cs142lsp21zz@dsmlp-login]:~:2$
 ```
 
 To make sure everything is working, you can run `runlab --help`.  You should get this:
 
 ```
-cs141lwi20zz@cs141lwi20zz-10005:~$ runlab --help
+cs142lsp21zz@cs142lsp21zz-10005:~$ runlab --help
 usage: runlab [-h] [-v] [--pristine] [--info [INFO]] [--no-validate] ...
 
 Run a Lab
@@ -167,7 +167,7 @@ optional arguments:
   --info [INFO]  Print information about this lab an exit. With an argument
                  print that field of lab structure.
   --no-validate  Don't check for erroneously edited files.
-cs141lwi20zz@cs141lwi20zz-10005:~$
+cs142lsp21zz@cs142lsp21zz-10005:~$
 ```
 
 If you go this route, you can skip instructions below regarding running `docker` directly.
@@ -183,11 +183,8 @@ https://docs.docker.com/install/.  This seems to work pretty easily,
 but the course staff is not able to assist in getting docker running
 on your Mac.
 
-Once that's done, you should be able to run `docker` in the terminal:
-```
-docker run -v $HOME/lab1:/runner/lab1 -it ucsdnvsl/cse141pp:latest
-```
-
+Once that's done, you should be able to run `docker` in the terminal (see [here](#start-a-docker-container) to learn how
+to run the container)
 
 One thing to keep in mind:  The docker image large (~18GB) and you'll need to devote at least 2GB of DRAM to it.
 
@@ -243,14 +240,11 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 4. To start docker into the development environment for the labs
-Run the command replacing the tagged parts:
+Run the command replacing the tagged parts  (see [here](#start-a-docker-container) for more details):
 ```
 docker run -it --volume <Directory to your lab folder>:/runner/<Your lab folder name> ucsdnvsl/cse141pp:latest
 ```
-For example:
-```
-docker run -v $HOME/lab1:/runner/lab1 -it ucsdnvsl/cse141pp:latest
-```
+
 
 Change directories to land where your files should be.
 ```
