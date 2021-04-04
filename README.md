@@ -483,7 +483,7 @@ EXTRA_OPTIONS=
 salutation=
 ```
 
-`cmd_line` lets you pass command line options to `code.exe`.  In this
+`EXTRA_OPTIONS` lets you pass command line options to `code.exe`.  In this
 case, we set the name by passing `--name` (e.g., `EXTRA_OPTIONS=--name Steven`).
 
 `salutation` is a lab-specific configuration option.  A value of
