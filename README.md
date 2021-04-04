@@ -407,7 +407,7 @@ confusing.
 In the example commands that follow, we'll assume your github username is `stevenjswanson`.
 
 Navigate to
-`/home/wi20-CSE141L-intro-stevenjswanson` and
+`/home/sp21-CSE142L-intro-stevenjswanson` and
 run `runlab`.  This will compile the starter code into
 `code.exe` and run it.
 
@@ -515,7 +515,7 @@ and energy.
 
 1. Log into Gradescope. 
 
-2. Click on your section of 141L.
+2. Click on your section of 142L.
 
 3. Click `Introduction to the development environment`.
 
@@ -523,7 +523,7 @@ and energy.
 
 5. Select `Github`
 
-6. Enter the name of your repo (e.g., `wi20-CSE141L-intro-stevenjswanson')
+6. Enter the name of your repo (e.g., `sp21-CSE142L-intro-stevenjswanson')
 
 7. Select the `master` branch.
 
