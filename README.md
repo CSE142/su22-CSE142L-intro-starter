@@ -183,9 +183,13 @@ https://docs.docker.com/install/.  This seems to work pretty easily,
 but the course staff is not able to assist in getting docker running
 on your Mac.
 
-Once that's done, you should be able to run `docker` in the terminal.
+Once that's done, you should be able to run `docker` in the terminal:
+```
+docker run -v $HOME/lab1:/runner/lab1 -it ucsdnvsl/cse141pp:latest
+```
 
-One thing to keep in mind:  The docker image large (~9GB) and you'll need to devote at least 2GB of DRAM to it.
+
+One thing to keep in mind:  The docker image large (~18GB) and you'll need to devote at least 2GB of DRAM to it.
 
 
 #### Run Docker on Your Windows Machine
@@ -239,9 +243,13 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 4. To start docker into the development environment for the labs
-Run the command replacing the bold parts:
+Run the command replacing the tagged parts:
 ```
-docker run -it --volume "Directory to your lab folder":/runner/"Your lab folder name" stevenjswanson/cse141pp:latest
+docker run -it --volume <Directory to your lab folder>:/runner/<Your lab folder name> ucsdnvsl/cse141pp:latest
+```
+For example:
+```
+docker run -v $HOME/lab1:/runner/lab1 -it ucsdnvsl/cse141pp:latest
 ```
 
 Change directories to land where your files should be.
