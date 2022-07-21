@@ -9,10 +9,6 @@ This lab is in a Jupyter notebook (`Lab.ipynb`).  To run it'll you'll need to
 This document describe how to do those two things.  Then, you'll be able to
 open the Jupyter notebook and proceed with lab itself.
 
-**NOTE:** There is a pre-lab reading quiz due on Wednesday.  For this lab, I've
-provided a [pdf of the lab](./Lab.pdf) so you can read it without actually
-connecting to datahub.  You can take the quiz at https://www.gradescope.com/courses/316365.
-
 # Software You Will Need
 
 **Note** Safari and Internet Explorer are not currently supported.  This will
