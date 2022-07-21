@@ -25,7 +25,7 @@ class ThisLab(CSE141Lab):
             # This is the command that will be run for the lab.
             default_cmd = ['make'],
             # This is the repo to run the lab in.  This should be the starter repo provided to the student.
-            repo = kwargs.get("repo") or "https://github.com/NVSL/CSE141pp-Lab-Introduction-to-the-Development-Environment",
+            repo = kwargs.get("repo") or "https://github.com/hungweitseng/CSE142-Lab-The-PE.git",
             # The tag to use in that repo.
             reference_tag = kwargs.get("reference_tag") or "master",
             # These are environment variables student is allowed to set in config.env.
