@@ -35,7 +35,7 @@ The content for each lab will be distributed via github classroom.
 So, to do the course, you need:
 
 1. You'll need to log into datahub.ucsd.edu to run a jupyter notebook. 
-2. Tha lab from github classroom.  Find the link on the course home page: https://www.escalab.org/classes/cse142-2022summer/
+2. Tha lab from github classroom.  Find the link on the course home page: https://www.escalab.org/classes/cse142L-2022summer/
 
 ## Connecting to UCSD Datahub
 
