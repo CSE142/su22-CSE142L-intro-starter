@@ -1,52 +1,34 @@
-# This makefile should run the lab and generate all the necessary
-# outputs.
-#
-# Changes to this file will not be propogated to the server.
+.SUFFIXES: 
 
-default: code.out
+default: 
 
-# Anything list here will be deleted with `make clean`
-CLEANUP=*.out
+PRIVATE_FILES=Lab.key.ipynb admin .git Moneta.md Lab-equinix.key.ipynb
 
-# Standard rules for a bunch of stuff, including compiling, cleaning,
-# testing, etc.  In particular, it knows how to make code.exe from
-# code.cpp by compiling in main.cpp
-#
-# All the inputs are copied into the build/ directory.  By default,
-# they are copied from ./, but setting LAB_SUBMISSION_DIR will cause
-# them to be copied from there.  runlab sets
-# LAB_SUBMISSION_DIR=solution to run the solution.
+STUDENT_EDITABLE_FILES=hello_world2.cpp
+
+.PHONY: create-labs
+create-labs:
+	cse142 lab delete -f intro-bench
+	cse142 lab create --name "Lab 1: The Performance Equation (Benchmark)" --short-name "intro-bench" --docker-image stevenjswanson/cse142l-swanson-runner:latest --starter-repo https://github.com/NVSL/CSE141pp-Lab-The-PE.git --starter-branch fa21-starter --execution-time-limit 0:05:00 --total-time-limit 1:00:00 --due-date 2021-10-12T23:59:59
+
+	cse142 lab delete -f intro
+	cse142 lab create --name "Lab 1: The Performance Equation" --short-name "intro" --docker-image stevenjswanson/cse142l-swanson-runner:latest --execution-time-limit 0:05:00 --total-time-limit 1:00:00 --due-date 2021-10-12T23:59:59
+
+COMPILER=gcc-8
 include $(ARCHLAB_ROOT)/cse141.make
 
-# Here you can define your own options that students can set in
-# config.env that will translate into more complex configurations
-# without giving them full control.
-# For instance, you could let them choose a compiler and set CC, CXX,
-# and LD appropriately.
+$(BUILD)microbench.o: OPTIMIZE=$(MICROBENCH_OPTIMIZE)
+$(BUILD)microbench.s: OPTIMIZE=$(MICROBENCH_OPTIMIZE)
 
-ifeq ($(salutation),short)
-SALUTATION=hi
-endif
-ifeq ($(salutation),long)
-SALUTATION=hello
-endif
-ifeq ($(salutation),formal)
-SALUTATION=greetings
-endif
+microbench.exe: $(BUILD)microbench.o
+hello_world.exe: $(BUILD)hello_world.o
+hello_world2.exe: $(BUILD)hello_world2.o
+.PHONY: autograde
 
-export SALUTATION
+autograde: hello_world2.exe
+	./hello_world2.exe
 
-# CMD_LINE_ARGS gets passed to the executable built from their
-# code. Libarchlab gets the first crack at parsing the command line,
-# so these configure what performance counters to look for.
-ifeq ($(DEVEL_MODE),yes)
-        # DEVEL_MODE is set to yes, when they run their code locally.
-        # This means that libarchlab can't access the performance
-        # counters, so you shouldn't ask for any or their executabel
-        # won't run.
-	CMD_LINE_ARGS=--stat runtime=ARCHLAB_WALL_TIME $(EXTRA_OPTIONS)
-else
-        # This is what gets run on the server.
-	CMD_LINE_ARGS=--stat-set default.cfg $(EXTRA_OPTIONS)
-endif
+bitcount.exe: $(BUILD)bitcount.o
 
+#test
+#test2
