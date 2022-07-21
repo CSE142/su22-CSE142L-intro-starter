@@ -80,7 +80,7 @@ and stop your server and then restart it.
 ## Cloning the Lab Repo
 
 First, accept the assignement on Github Classroom.  It's available via the 142L
-[home page](https://github.com/CSE141pp/Home/).
+[home page](https://www.escalab.org/classes/cse142L-2022summer//).
 
 This will set you up with a copy of the starter repository.
 
